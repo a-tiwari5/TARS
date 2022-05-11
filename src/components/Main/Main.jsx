@@ -2,15 +2,25 @@ import React from 'react'
 import Card from '../Card/Card'
 import "./main.scss"
 
-const Main = () => {
+import { connect } from 'react-redux'
+
+const Main = ({ posts }) => {
     return (
         <div className='mainContainer '>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {posts.length !== 0
+                ?
+                posts.data.results.map((post) => {
+                    return <Card key={post.id} post={post} />
+                }) : null
+            }
         </div>
     )
 }
 
-export default Main
+const mapStateToProps = (state) => {
+    return {
+        posts: state.posts.posts
+    }
+}
+
+export default connect(mapStateToProps)(Main)

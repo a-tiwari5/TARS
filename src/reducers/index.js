@@ -1,12 +1,6 @@
-import { combineReducers } from "redux"
-
-const postReducer=()=>{
-    return [
-        
-    ]
-}
-
+import { combineReducers } from 'redux';
+import searchReducer from './searchReducer';
 
 export default combineReducers({
-    replaceMe: () => 10
-})
+    posts: searchReducer
+});

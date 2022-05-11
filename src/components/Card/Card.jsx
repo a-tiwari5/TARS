@@ -2,23 +2,24 @@ import React from 'react'
 import "./card.scss"
 import { ThumbUpAltOutlined } from '@mui/icons-material/';
 
-const Card = () => {
+const Card = ({ post }) => {
+    console.log(post)
     return (
-        <div className='cardContainer'>
-            <img src="https://images.unsplash.com/photo-1644982647708-0b2cc3d910b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+        <div className='cardContainer '>
+            <img src={post.urls.regular} alt="" />
             <div className="bottom d-flex">
                 <div className="profile">
-                    <img src="https://images.unsplash.com/photo-1644982647708-0b2cc3d910b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                    <img src={post.user.profile_image.small} alt="" />
                 </div>
                 <div className="all w-100 d-flex justify-content-between align-items-center">
                     <div className="desc">
-                        <span className="name">Julia Robertson</span>
-                        <div className="handel">@juliaclicks</div>
+                        <span className="name">{post.user.first_name} {post.user.last_name}</span>
+                        <div className="handel">{post.user.instagram_username}</div>
                     </div>
                     <div className="like d-flex">
                         <ThumbUpAltOutlined className='icon mx-1' />
                         <div className="likes">
-                            2.3K
+                            {post.likes}K
                         </div>
                     </div>
                 </div>

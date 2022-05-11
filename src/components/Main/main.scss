@@ -1,0 +1,9 @@
+.mainContainer {
+  height: 100vh;
+  margin-top: 70px;
+  margin-left: 150px;
+  margin-right: 130px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+.navbarContainer {
+  //   background-color: aqua;
+  height: 97px;
+  .logo {
+    span {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 42px;
+      font-family: "Pattaya", sans-serif !important;
+      margin-left: 150px;
+    }
+  }
+  .searchBar {
+    width: 419px;
+    height: 43px;
+    background: #fafafa;
+    border: 1px solid #ececec;
+    box-shadow: inset 0px 4px 19px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    margin-left: 64px;
+    .icon {
+      margin-left: 13px;
+      color: #c4c4c4;
+      font-size: 20px;
+    }
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      margin-left: 11px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      color: #c4c4c4;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: #c4c4c4;
+      }
+    }
+  }
+  .item {
+    font-weight: 700;
+    font-size: 12px;
+    color: #333;
+    margin-left: 36px;
+  }
+  .toggle {
+    margin-left: 88px;
+  }
+}

@@ -3,6 +3,9 @@ import Card from '../Card/Card'
 import "./main.scss"
 
 import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import axios from 'axios'
+import { useState } from 'react'
 
 const Main = ({ posts }) => {
     return (

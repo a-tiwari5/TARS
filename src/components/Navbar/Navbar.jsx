@@ -8,6 +8,7 @@ import {
     searchPost,
     fetchPosts
 } from '../../actions/';
+import { useEffect } from 'react';
 
 
 const Navbar = (props) => {
@@ -19,7 +20,15 @@ const Navbar = (props) => {
         env.preventDefault();
         props.fetchPosts(props.text);
     }
-    console.log(props)
+
+    const initialRender = () => {
+        props.fetchPosts('mountains')
+    }
+
+    useEffect(() => {
+        initialRender();
+    }, [])
+
     return (
         <div className='navbarContainer d-flex align-items-center'>
             <div className="logo">

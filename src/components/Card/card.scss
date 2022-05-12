@@ -1,7 +1,9 @@
 .cardContainer {
-  height: fit-content;
+  display: grid;
   width: 446.98px;
   max-width: fit-content;
+  height: min-content;
+  grid-auto-rows: auto;
   border-radius: 8px 8px 8px 8px;
   border: 1px solid #e5e5e5;
   img {

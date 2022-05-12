@@ -10,28 +10,29 @@ import IconButton from '@mui/material/IconButton';
 import "./popup.scss"
 
 const Popup = ({ open, setOpenPopup, post }) => {
-    console.log(post.tags)
+    console.log(post)
     return (
         <>
             <Dialog
                 maxWidth='md'
                 open={open}
             >
-
                 <DialogContent sx={{ padding: 0, width: '900px', height: '624px' }}>
                     <div className="content" >
                         <div className="image">
                             <img src={post.urls.full} alt="" />
-                            <div className="shareBtn">
-                                <ShareIcon sx={{ marginRight: '8px' }} />
-                                <span>Share</span>
-                            </div>
-                            <div className="infoBtn">
-                                <InfoIcon sx={{ marginRight: '8px' }} />
-                                <span>Share</span>
-                            </div>
-                            <div className="downloadBtn bg-success">
-                                <span>Download image</span>
+                            <div className="btns">
+                                <div className="shareBtn">
+                                    <ShareIcon sx={{ marginRight: '8px' }} />
+                                    <span>Share</span>
+                                </div>
+                                <div className="infoBtn">
+                                    <InfoIcon sx={{ marginRight: '8px' }} />
+                                    <span>Share</span>
+                                </div>
+                                <div className="downloadBtn bg-success">
+                                    <span>Download image</span>
+                                </div>
                             </div>
                         </div>
                         <div className="desc">
@@ -41,8 +42,8 @@ const Popup = ({ open, setOpenPopup, post }) => {
                                         <img src={post.user.profile_image.medium} alt="" />
                                     </div>
                                     <div className="item mx-2">
-                                        <span className="name">Jacob Jones</span>
-                                        <div className="handel">@jacobclicks</div>
+                                        <span className="name">{post.user.first_name} {post.user.last_name}</span>
+                                        <div className="handel">@ {post.user.instagram_username}</div>
                                     </div>
                                     <span className="handel instaHandel mx-2">
                                         <InstagramIcon className='icon' />\{post.user.instagram_username}

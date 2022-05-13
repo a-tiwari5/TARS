@@ -5,11 +5,12 @@ import Popup from '../Popup/Popup';
 import { useState } from 'react';
 
 const Card = ({ post }) => {
+    console.log(post)
     const [openPopup, setOpenPopup] = useState(false)
     return (
         <>
             <div className='cardContainer' onClick={() => setOpenPopup(!openPopup)}>
-                <img src={post.urls.regular} alt="" />
+                <img src={post.urls.small} alt="" />
                 <div className="bottom d-flex">
                     <div className="profile">
                         <img src={post.user.profile_image.medium} alt="" />

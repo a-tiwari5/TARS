@@ -20,7 +20,7 @@ const Popup = ({ open, setOpenPopup, post }) => {
                 <DialogContent sx={{ padding: 0, width: '900px', height: '624px' }}>
                     <div className="content" >
                         <div className="image">
-                            <img src={post.urls.full} alt="" />
+                            <img src={post.urls.regular} alt="" />
                             <div className="btns">
                                 <div className="shareBtn">
                                     <ShareIcon sx={{ marginRight: '8px' }} />

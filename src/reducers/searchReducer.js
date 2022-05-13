@@ -1,5 +1,4 @@
 import { FETCH_POSTS, SEARCH_POST } from "../actions/types"
-import axios from "axios"
 
 
 

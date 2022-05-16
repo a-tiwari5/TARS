@@ -58,8 +58,9 @@ const Navbar = (props) => {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
-        text: state.posts.text,
+        text: state.data.text,
     }
 }
 

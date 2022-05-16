@@ -14,7 +14,7 @@ export const fetchPosts = text => dispatch => {
             params: {
                 query: text,
                 client_id: '3nDCTHXivTz9w8XLFUU1MC6NLo9PtreskRinC1NWUh0',
-                per_page: 25
+                per_page: 100
             }
         }).then(response => {
             dispatch({

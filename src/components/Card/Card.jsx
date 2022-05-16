@@ -5,7 +5,7 @@ import Popup from '../Popup/Popup';
 import { useState } from 'react';
 
 const Card = ({ post }) => {
-    console.log(post)
+
     const [openPopup, setOpenPopup] = useState(false)
     return (
         <>
@@ -29,9 +29,7 @@ const Card = ({ post }) => {
                     </div>
                 </div>
             </div>
-            <Popup open={openPopup} setOpenPopup={setOpenPopup} post={post}>
-
-            </Popup>
+            <Popup key={post.id} open={openPopup} setOpenPopup={setOpenPopup} post={post} />
         </>
     )
 }

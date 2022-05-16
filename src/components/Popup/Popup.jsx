@@ -10,10 +10,10 @@ import IconButton from '@mui/material/IconButton';
 import "./popup.scss"
 
 const Popup = ({ open, setOpenPopup, post }) => {
-    console.log(post)
     return (
-        <>
+        <React.Fragment key={post.id}>
             <Dialog
+                key={post.id}
                 maxWidth='md'
                 open={open}
             >
@@ -86,7 +86,7 @@ const Popup = ({ open, setOpenPopup, post }) => {
                     <CloseIcon />
                 </IconButton>
             </Dialog>
-        </>
+        </React.Fragment>
     )
 }
 
